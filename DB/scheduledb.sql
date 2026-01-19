@@ -51,9 +51,9 @@ CREATE TABLE `appointments` (
 --
 
 INSERT INTO `appointments` (`Id`, `Subject`, `StartTime`, `EndTime`, `StartTimezone`, `EndTimezone`, `Location`, `Description`, `IsAllDay`, `RecurrenceID`, `FollowingID`, `RecurrenceRule`, `RecurrenceException`, `IsReadonly`, `IsBlock`, `RoomID`) VALUES
-(1, 'Meeting', '2022-12-12 00:00:00', '2022-12-13 00:00:00', NULL, NULL, '', '', b'1', NULL, NULL, 'FREQ=DAILY;INTERVAL=1;', '20221213T183000Z', NULL, NULL, NULL),
-(2, 'edited', '2022-12-05 00:00:00', '2022-12-08 00:00:00', NULL, NULL, '', '', b'1', NULL, NULL, NULL, NULL, NULL, NULL, 4),
-(3, 'Edited event', '2022-12-05 00:00:00', '2022-12-11 00:00:00', NULL, NULL, '', '', b'1', NULL, NULL, NULL, NULL, NULL, NULL, 4);
+(1, 'Meeting', '2026-01-16 00:00:00', '2026-01-17 00:00:00', NULL, NULL, '', '', b'1', NULL, NULL, 'FREQ=DAILY;INTERVAL=1;', '20221213T183000Z', NULL, NULL, 4),
+(2, 'edited', '2026-01-15 00:00:00', '2026-01-16 00:00:00', NULL, NULL, '', '', b'1', NULL, NULL, NULL, NULL, NULL, NULL, 4),
+(3, 'Edited event', '2026-01-17 00:00:00', '2026-01-18 00:00:00', NULL, NULL, '', '', b'1', NULL, NULL, NULL, NULL, NULL, NULL, 4);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

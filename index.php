@@ -21,16 +21,15 @@
   <div id="Schedule"></div>
   <script>
   var dataManager = new ej.data.DataManager({
-	url: "http://localhost/Javascript-Scheduler-CRUD-PHP-and-MySQL/server.php",
-	crudUrl: "http://localhost/Javascript-Scheduler-CRUD-PHP-and-MySQL/server.php",
+	url: "http://localhost/Javascript-Scheduler-CRUD-PHP-MySQL/server.php",
+	crudUrl: "http://localhost/Javascript-Scheduler-CRUD-PHP-MySQL/server.php",
 	adaptor: new ej.data.UrlAdaptor(),
 	crossDomain: true
 });
     var scheduleObj = new ej.schedule.Schedule({
 		height: "550px",
-        selectedDate: new Date(2020, 9, 20),
+        selectedDate: new Date(2026, 0, 16),
         views: ["TimelineDay", "TimelineWeek"],
-        allowDragAndDrop: true,
         eventSettings: { dataSource: dataManager },
         group: {
             resources: ["MeetingRoom"]
