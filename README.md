@@ -19,10 +19,13 @@ This repository contains a sample full-stack application demonstrating how to sy
 ├── README.md                  # This guide
 ├── DB
 │   ├── scheduledb.sql         # DB Query
-├── index.php
+├── index.php                  # Scheduler Configuration
 └── server.php                 # Database Configuration
 ```  
-## Setup and Cloning the repository
+## Setup
+
+### Cloning the Repository
+- Clone the Repository
 
 ### MySQL Configuration
 - Create Username , Password and DataBase in MySQL
@@ -60,19 +63,21 @@ This repository contains a sample full-stack application demonstrating how to sy
 4. You can perform CRUD operation on the scheduler that will be reflected in the MySQL database table.
 
 ## Output Preview
-![Frontend Preview](./SampleOutputs/frontend.png)
+![Frontend Preview](./Outputs/Frontend.png)
 *Image illustrating the Syncfusion Scheduler Component*
 
-![Database Preview](./SampleOutputs/database.png)
+![Database Preview](./Outputs/Database.png)
 *Image illustrating the events of Syncfusion Scheduler in MySQL*
 
 ## Troubleshooting
 - **Page Not Found**:Check the file path correctly in the browser search bar
 - **Apache Server port stopped in XAMPPSERVER**: Change the Port no in config file and mentioned the port no in url and crudurl in index.php.
 - **Refused to Connect with server**: Check the url and crudurl in index.php.
+<br/>
+<br/>
+<br/>
 
-## How To Integrate and build from scratch
-### A step by step guide integrate Syncfusion JavaScript Scheduler with MySQL and PHP.
+## A step by step guide integrate Syncfusion JavaScript Scheduler with MySQL and PHP.
 
 ### XAMPP Server
 
@@ -93,8 +98,10 @@ This repository contains a sample full-stack application demonstrating how to sy
 3. Create a new MySQL Database along with Username , Password.
 
 ### Connect MySQL with XAMPPSERVER
-1. Create your project folder 
-2. Create a gitleaks.yaml inside .github/workflows to tool used to what to scan and what to ignore.
+1. Create a new project folder (for example: Javascript-Scheduler-CRUD-PHP-and-MySQL).
+2. Create a `.github` folder inside the `Javascript-Scheduler-CRUD-PHP-and-MySQL`
+3. Create `workflows` folder inside the `.github`
+4. Create a `gitleaks.yaml` inside `workflows` to tool used to what to scan and what to ignore.
     ```bash
     name: Secret Value found!!
     on:
@@ -141,7 +148,8 @@ This repository contains a sample full-stack application demonstrating how to sy
                dotnet $GITHUB_WORKSPACE/Syncfusion.Email/lib/net6.0/GitleaksReportMail.dll ${{ secrets.CITEAMCREDENTIALS }} "$GITHUB_REF_NAME" ${{ secrets.NETWORKCREDENTIALS }} ${{ secrets.NETWORKKEY }} "$GITHUB_WORKSPACE" ${{ secrets.ORGANIZATIONNAME }}
                exit 1
       ```
-3. Create a scheduledb.sql in DB folder to implement table creation query and sample data
+5. Create a DB folder inside `Javascript-Scheduler-CRUD-PHP-and-MySQL`
+6. Create a `scheduledb.sql` in `DB` folder to implement table creation query and sample data
     ```bash
       -- phpMyAdmin SQL Dump
       -- version 5.2.1
@@ -206,23 +214,25 @@ This repository contains a sample full-stack application demonstrating how to sy
       /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
     ```
-4. Create a index.php for define url and scheduler component.
+7. Create a `index.php` inside the `Javascript-Scheduler-CRUD-PHP-and-MySQL`  to render the schedule component.
     ```bash
     <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
     <title>Essential Studio for JavaScript : Detail Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="https://cdn.syncfusion.com/ej2/20.4.38/ej2-base/styles/material.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.syncfusion.com/ej2/20.4.38/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.syncfusion.com/ej2/20.4.38/ej2-calendars/styles/material.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.syncfusion.com/ej2/20.4.38/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.syncfusion.com/ej2/20.4.38/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.syncfusion.com/ej2/20.4.38/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.syncfusion.com/ej2/20.4.38/ej2-lists/styles/material.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.syncfusion.com/ej2/20.4.38/ej2-popups/styles/material.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.syncfusion.com/ej2/20.4.38/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.syncfusion.com/ej2/20.4.38/ej2-schedule/styles/material.css" rel="stylesheet" type="text/css"/>
-		<script src="https://cdn.syncfusion.com/ej2/20.4.38/dist/ej2.min.js" type="text/javascript"></script>
+		<title>Essential Studio for JavaScript : Detail Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		    <link href="https://cdn.syncfusion.com/ej2/32.1.20/ej2-base/styles/material.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.syncfusion.com/ej2/32.1.20/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.syncfusion.com/ej2/32.1.20/ej2-calendars/styles/material.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.syncfusion.com/ej2/32.1.20/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.syncfusion.com/ej2/32.1.20/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.syncfusion.com/ej2/32.1.20/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.syncfusion.com/ej2/32.1.20/ej2-lists/styles/material.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.syncfusion.com/ej2/32.1.20/ej2-popups/styles/material.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.syncfusion.com/ej2/32.1.20/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.syncfusion.com/ej2/32.1.20/ej2-schedule/styles/material.css" rel="stylesheet" type="text/css"/>
+		    <script src="https://cdn.syncfusion.com/ej2/32.1.20/dist/ej2.min.js" type="text/javascript"></script>
     </head>
     <body>    
     <?php
@@ -230,17 +240,10 @@ This repository contains a sample full-stack application demonstrating how to sy
       echo '
       <div id="Schedule"></div>
       <script>
-      var dataManager = new ej.data.DataManager({
-	    url: "http://localhost/Javascript-Scheduler-CRUD-PHP-MySQL/server.php",
-	    crudUrl: "http://localhost/Javascript-Scheduler-CRUD-PHP-MySQL/server.php",
-	    adaptor: new ej.data.UrlAdaptor(),
-	    crossDomain: true
-    });
     var scheduleObj = new ej.schedule.Schedule({
 		height: "550px",
         selectedDate: new Date(2026, 0, 16),
         views: ["TimelineDay", "TimelineWeek"],
-        eventSettings: { dataSource: dataManager },
         group: {
             resources: ["MeetingRoom"]
         },
@@ -269,13 +272,26 @@ This repository contains a sample full-stack application demonstrating how to sy
       </body>
       </html>
       ```
-5. Create server.php and define the CRUD operations
+8. In index.php file add datamanger code block to connect the scheduler component and MySQL
+    ```bash
+      var dataManager = new ej.data.DataManager({
+	    url: "http://localhost/Javascript-Scheduler-CRUD-PHP-MySQL/server.php",
+	    crudUrl: "http://localhost/Javascript-Scheduler-CRUD-PHP-MySQL/server.php",
+	    adaptor: new ej.data.UrlAdaptor(),
+	    crossDomain: true
+    });
+    ```
+    Then add eventsettings in scheduleobj in `index.php` file
+    ```bash
+        eventSettings: { dataSource: dataManager },
+    ```
+9. Create `server.php` and define the CRUD operations
     ```bash
     <?php
-        $servername = "localhost";
+    $servername = "localhost";
 		$username = "root";
 		$password = "password";
-		$dbname = "username";
+		$dbname = "databasename";
 	
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		if($conn->connect_error) {        
@@ -475,21 +491,21 @@ This repository contains a sample full-stack application demonstrating how to sy
 
 
 1. **Start XAMPP services**
-  - Open **XAMPP Control Panel**
-  - Start **Apache**
+    - Open **XAMPP Control Panel**
+    - Start **Apache**
 
 2. **Place project files**
-  - Copy the project folder `Your Project Folder Name` into:
+    - Copy the project folder `Your Project Folder Name` into:
 
-     ```
-     C:\xampp\htdocs\
-     ```
+       ```
+      C:\xampp\htdocs\
+      ```
 
 3. **Open in browser**
-  - Go to: `http://localhost/`
-   
-  - Then open the app:
-     ```
-     http://Your-Project-Folder-Name
-     ```
+    - Go to: `http://localhost/`
+
+    - Then open the app:
+       ```
+       http://localhost/Javascript-Scheduler-CRUD-PHP-and-MySQL
+       ```
 4. You can perform CRUD operation on the scheduler that will be reflected in the MySQL database table.
