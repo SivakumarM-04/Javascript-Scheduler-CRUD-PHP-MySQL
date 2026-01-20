@@ -25,7 +25,7 @@ This repository contains a sample full-stack application demonstrating how to sy
 ## Setup
 
 ### Cloning the Repository
-- Clone the Repository
+- Clone the repository to your local machine:
 
 ### MySQL Configuration
 - Create Username , Password and DataBase in MySQL
@@ -285,7 +285,7 @@ This repository contains a sample full-stack application demonstrating how to sy
     ```bash
         eventSettings: { dataSource: dataManager },
     ```
-9. Create `server.php` and define the CRUD operations
+9. Create `server.php` and define the CRUD operations and Replace the username , password and dbname with your own credentials
     ```bash
     <?php
     $servername = "localhost";
