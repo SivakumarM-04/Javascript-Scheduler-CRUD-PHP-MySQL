@@ -11,17 +11,7 @@ This repository contains a sample full-stack application demonstrating how to sy
 - XAMPPSERVER(>= 8.2.12)
 - A MySQL Database with Username , Password and DataBase (Download at https://dev.mysql.com/downloads/installer/)
 - XAMPPSERVER For PHP using apachae server(Download at https://www.apachefriends.org/download.html)
-- Basic familiarity with MySQL and PHP
-- Make sure the ports nothing run on 80 , 3306
 
-## Project Structure
-```
-├── README.md                  # This guide
-├── DB
-│   ├── scheduledb.sql         # DB Query
-├── index.php                  # Scheduler Configuration
-└── server.php                 # Database Configuration
-```  
 ## Setup
 
 ### Cloning the Repository
@@ -36,9 +26,9 @@ This repository contains a sample full-stack application demonstrating how to sy
 ### Start Xampp Server
 
 - After the successful installation of the XAMPP server, launch the application and start the Apache server.
-- Move the `Javascript-Scheduler-CRUD-PHP-and-MySQL` repository files in the XAMPP server's root directory, specifically at `C:\xampp\htdocs`.
+- Move the `Javascript-Scheduler-CRUD-PHP-MySQL` repository files in the XAMPP server's root directory, specifically at `C:\xampp\htdocs`.
 - Upon completion, Launch a web browser and navigate to `localhost`, you will be able to see the server running.
-- Next, Navigate to `localhost/Javascript-Scheduler-CRUD-PHP-and-MySQL` in your web browser. You will now be able to access the running Syncfusion scheduler application.
+- Next, Navigate to `localhost/Javascript-Scheduler-CRUD-PHP-MySQL` in your web browser. You will now be able to access the running Syncfusion scheduler application.
 - Now, you can perform the CRUD operations it will be reflected on MySQL Database.
 
 ## Running the application
@@ -48,7 +38,7 @@ This repository contains a sample full-stack application demonstrating how to sy
   - Start **Apache**
 
 2. **Place project files**
-  - Copy the project folder `Javascript-Scheduler-CRUD-PHP-and-MySQL` into:
+  - Copy the project folder `Javascript-Scheduler-CRUD-PHP-MySQL` into:
      ```
      C:\xampp\htdocs\
      ```
@@ -58,7 +48,7 @@ This repository contains a sample full-stack application demonstrating how to sy
    
   - Then open the app:
      ```
-     http://localhost/Javascript-Scheduler-CRUD-PHP-and-MySQL
+     http://localhost/Javascript-Scheduler-CRUD-PHP-MySQL
      ```
 4. You can perform CRUD operation on the scheduler that will be reflected in the MySQL database table.
 
